@@ -85,10 +85,13 @@ THE SOFTWARE.
           break;
       }
     }
+
+    var url = settings.url;
+    delete settings.url;
+
     var name = settings.name;
     delete settings.name;
 
-    var url = $(this).attr('href') || delete settings.url;
 
     var opts = [];
     for(prop in settings)
@@ -97,6 +100,8 @@ THE SOFTWARE.
     opts = opts.join(',');
 
     return this.each(function(){
+      var url = url || $(this).attr('href')
+
       $(this).bind('click', function(e) {
         window.open(url, name, opts);
         e.preventDefault();
