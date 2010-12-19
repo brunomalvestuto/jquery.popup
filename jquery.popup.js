@@ -48,7 +48,7 @@ THE SOFTWARE.
       width: 200,
       height: 300,
       position: 'center',
-      name: 'popup',
+      name: 'popup'
     }, options);
 
     if(settings.position != null) {
@@ -81,7 +81,7 @@ THE SOFTWARE.
           }
         break;
         case 'object':
-          $.extend(settings, position)
+          $.extend(settings, position);
           break;
       }
     }
@@ -100,12 +100,12 @@ THE SOFTWARE.
     opts = opts.join(',');
 
     return this.each(function(){
-      var url = url || $(this).attr('href')
+      var url = url || $(this).attr('href');
 
       $(this).bind('click', function(e) {
         window.open(url, name, opts);
         e.preventDefault();
-      })
+      });
     });
 
   };
