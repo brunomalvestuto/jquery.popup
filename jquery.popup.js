@@ -100,7 +100,7 @@ THE SOFTWARE.
     opts = opts.join(',');
 
     return this.each(function(){
-      var url = url || $(this).attr('href')
+      var url = url || $(this).attr('href');
 
       $(this).bind('click', function(e) {
         window.open(url, name, opts);
