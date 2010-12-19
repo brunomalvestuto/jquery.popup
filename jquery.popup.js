@@ -95,7 +95,6 @@ THE SOFTWARE.
       opts.push(prop + '=' + settings[prop]);
 
     opts = opts.join(',');
-    console.log(opts)
 
     return this.each(function(){
       $(this).bind('click', function(e) {
